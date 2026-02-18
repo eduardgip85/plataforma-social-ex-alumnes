@@ -1,0 +1,10 @@
+.nav-link-custom {
+  color: var(--brand-color) !important;
+  border-bottom: 4px solid var(--brand-color);
+}
+
+.navbar-nav .nav-link {
+  font-size: 2rem;
+  font-weight: bold;
+  font-weight: 500;
+}
