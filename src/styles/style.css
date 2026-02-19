@@ -1,19 +1,21 @@
 @import url(./components/hero.css);
 @import url(./components/navbar.css);
 @import url(./components/footer.css);
+@import url(./components/cards.css);
 
-/* Definim els colors corporatius de la marca */
 :root {
-  --brand-color: #b90088; /* Aproximació al magenta del disseny */
+  --brand-color: #b90088;
   --brand-color-hover: #96006e;
 }
 
-/* Utilitats de color personalitzades per complementar Bootstrap */
+body::-webkit-scrollbar{
+  display: none;
+}
+
 .text-brand {
   color: var(--brand-color) !important;
 }
 
-/* Botó principal (fons ple) */
 .btn-brand {
   background-color: var(--brand-color);
   color: white;
@@ -26,7 +28,6 @@
   color: white;
 }
 
-/* Botó secundari (vora) */
 .btn-outline-brand {
   color: var(--brand-color);
   border: 1px solid var(--brand-color);
