@@ -11,6 +11,10 @@
   object-position: center 50%;
 }
 
+.custom-btn-responsive {
+  font-size: 2rem;
+}
+
 /* Responsivitat (Mobile First) */
 @media (max-width: 768px) {
   .hero-img-custom {
@@ -19,5 +23,9 @@
   
   .display-2 {
     font-size: 3rem;
+  }
+
+  .custom-btn-responsive {
+    font-size: 1.2rem;
   }
 }
