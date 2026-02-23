@@ -3,6 +3,9 @@
 @import url(./components/footer.css);
 @import url(./components/cards.css);
 @import url(./components/reviews.css);
+@import url(./components/students.css);
+@import url(./components/jobs.css);
+@import url(./components/events.css);
 
 :root {
   --brand-color: #b90088;

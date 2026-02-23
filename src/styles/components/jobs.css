@@ -1,0 +1,58 @@
+.job-card {
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0,0,0,0.05) !important;
+}
+
+.job-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1) !important;
+}
+
+.text-brand {
+    color: var(--brand-color);
+}
+
+.btn-outline-brand {
+    color: var(--brand-color);
+    border-color: var(--brand-color);
+}
+
+.btn-outline-brand:hover {
+    background-color: var(--brand-color);
+    color: white;
+}
+
+.badge-job-tech {
+    background-color: #f1f3f5;
+    color: #495057;
+    font-weight: 500;
+    padding: 0.5em 0.8em;
+    border-radius: 8px;
+    font-size: 0.75rem;
+}
+
+.w-fit-content {
+    width: fit-content;
+}
+
+.ls-1 {
+    letter-spacing: 1px;
+}
+
+@media (min-width: 576px) {
+    .border-start-sm {
+        border-left: 1px solid #eee;
+        padding-left: 1.5rem;
+    }
+}
+
+#SearchBar {
+    font-size: 1rem!important;
+    padding: 0.8rem 1.5rem;
+}
+
+@media (min-width: 768px) {
+    #SearchBar {
+        font-size: 1.8rem!important;
+    }
+}

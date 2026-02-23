@@ -3,24 +3,31 @@ import { studentsData, type Student } from '../../data/studentsData';
 const studentsList = document.getElementById('studentsList') as HTMLDivElement;
 
 function renderStudents(data: Student[]) {
-  
   studentsList.innerHTML = '';
 
   data.forEach(student => {
+
     const card = `
-      <div class="col-12 col-md-6 col-lg-4 col-xxl-4 col-sm-12">
-        <div class="card h-100 border-0 shadow-sm p-3 rounded-4 bg-light">
-          <div class="d-flex align-items-center mb-3">
-            <img src="${student.img}" class="rounded-circle me-3" width="140" height="140" style="object-fit: cover;">
-            <div>
-              <h1 class="mb-0 fw-bold">${student.name}</h1>
-              <p class="text-brand small mb-0">${student.role}</p>
-              <p class="text-brand small mb-0">${student.promotion}</p>
+      <div class="col-12 col-md-6 col-lg-4 gap-3">
+        <div class="card student-card h-100 border border-muted shadow-sm p-4 rounded-4 bg-white">
+          <div class="d-flex flex-column h-100 text-start">
+            
+            <img src="${student.img}" class="rounded-circle mb-3 border border-light shadow-sm" width="300" height="300" style="object-fit: cover;" alt="${student.name}">
+            
+            <h1 class="fw-semibold text-dark mb-1">${student.name}</h1>
+            <p class="text-muted mb-1 fs-3">${student.role}</p>
+            <p class="text-muted small mb-3">${student.promotion}</p>
+            
+            <p class="text-secondary small mb-3 line-clamp">${student.description}</p>
+            
+            <div class="d-flex flex-wrap gap-2 mb-4">
+              ${student.tags.map(tag => `<span class="badge badge-tech fw-normal text-muted fs-4">${tag}</span>`).join('')}
             </div>
-          </div>
-          <p class="text-muted small">${student.description}</p>
-          <div class="d-flex flex-wrap gap-2 mt-auto">
-            ${student.tags.map(tag => `<span class="badge bg-secondary text-white border">${tag}</span>`).join('')}
+
+            <div class="mt-auto">
+              <button class="btn btn-message text-white px-4 py-2 fs-4">Message</button>
+            </div>
+
           </div>
         </div>
       </div>
