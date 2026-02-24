@@ -10,10 +10,9 @@ Plataforma de connexió per a exalumnes de l'IT Academy de Barcelona Activa. Aqu
 * **Dades Tipades**: Ús d'Interfaces per garantir la integritat de la informació.
 * **Estructura Escalable**: Organització modular per components i dades (mocked data).
 
-### Nivell 2: Interactivitat i Qualitat (Actualitzat ✨)
+### Nivell 2: Interactivitat i Qualitat
 * **Cercadors en Temps Real**: Implementació de lògica de filtratge dinàmic per a Alumnes, Feines i Esdeveniments.
-* **Arquitectura Decoupled**: Separació de la lògica de negoci de la manipulació del DOM per facilitar el manteniment.
-* **Testing Unitari**: Implementació de proves automatitzades amb **Vitest** per validar els motors de cerca.
+* **Testing Unitari**: Implementació de proves automatitzades amb **Vitest** per validar dades.
 * **Experiència d'Usuari (UX)**: Gestió d'estats buits (empty states) quan no hi ha resultats en les cerques.
 * **Disseny Avançat**: Optimització de la responsivitat mitjançant mides fluides (`clamp`) i components personalitzats.
 
