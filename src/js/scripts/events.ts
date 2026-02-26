@@ -16,8 +16,10 @@ function renderEvents(data: Evento[]) {
     return;
   }
 
+  let card = "";
+
   data.forEach(event => {
-    const card = `
+    card += `
       <div class="col-12 col-md-6 col-lg-4">
         <div class="card event-card h-100 border border-muted shadow-sm rounded-4 overflow-hidden">
           
@@ -47,8 +49,10 @@ function renderEvents(data: Evento[]) {
         </div>
       </div>
     `;
-    eventsList.innerHTML += card;
+
   });
+  
+  eventsList.innerHTML = card;
 }
 
 searchBar.addEventListener('input', (e: Event) => {

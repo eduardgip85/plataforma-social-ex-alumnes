@@ -6,7 +6,7 @@
 }
 
 .newsletter-title {
-  font-size: clamp(2rem, 4vw, 3rem);
+  font-size: clamp(1.4rem, 4vw, 3rem);
 }
 
 .footer-link {
@@ -46,7 +46,7 @@
   font-weight: 300;
 }
 .form-control{
-  font-size: 2rem!important;
+  font-size: clamp(1.2rem, 1.2vw, 2rem)!important;
 }
 
 @media (max-width: 767px) {
@@ -64,6 +64,9 @@
   .btn-subscribe {
     border-radius: 50px !important;
     width: 100%;
+  }
+  .row p{
+    font-size: 1.2rem;
   }
 }
 

@@ -16,8 +16,10 @@ function renderJobs(data: Job[]) {
     return;
   }
 
+  let card = "";
+
   data.forEach(job => {
-    const card = `
+    card += `
       <div class="col-12 col-lg-4"> 
         <div class="card job-card h-150 border-0 shadow-sm rounded-4 overflow-hidden">
           <div class="card-body p-4">
@@ -53,8 +55,10 @@ function renderJobs(data: Job[]) {
         </div>
       </div>
     `;
-    jobsList.innerHTML += card;
+
   });
+
+  jobsList.innerHTML = card;
 }
 
 searchBar.addEventListener('input', (e: Event) => {

@@ -16,16 +16,18 @@ function renderStudents(data: Student[]) {
     return;
   }
 
+  let card = ""
+  
   data.forEach(student => {
 
-    const card = `
+    card += `
       <div class="col-12 col-md-6 col-lg-4 gap-3">
         <div class="card student-card h-100 border border-muted shadow-sm p-4 rounded-4 bg-white">
           <div class="d-flex flex-column h-100 text-start">
             
-            <img src="${student.img}" class="rounded-circle mb-3 border border-light shadow-sm" width="300" height="300" style="object-fit: cover;" alt="${student.name}">
+            <img src="${student.img}" class="rounded-circle mb-3 border border-light shadow-sm" width="300" height="300" style="object-fit: cover;" alt="Foto de perfil de ${student.name}">
             
-            <h1 class="fw-semibold text-dark mb-1">${student.name}</h1>
+            <h2 class="fw-semibold text-dark mb-1">${student.name}</h2>
             <p class="text-muted mb-1 fs-3">${student.role}</p>
             <p class="text-muted small mb-3">${student.promotion}</p>
             
@@ -43,8 +45,10 @@ function renderStudents(data: Student[]) {
         </div>
       </div>
     `;
-    studentsList.innerHTML += card;
+    
   });
+
+  studentsList.innerHTML = card;
 
 }
 
