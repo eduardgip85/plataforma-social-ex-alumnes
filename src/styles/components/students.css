@@ -1,0 +1,38 @@
+.student-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.student-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08) !important;
+}
+
+.line-clamp {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;  
+  overflow: hidden;
+}
+
+.badge-tech {
+  background-color: #f8f9fa; 
+  color: #6c757d;
+  border: 1px solid #dee2e6;
+  border-radius: 6px;
+  padding: 0.4em 0.8em;
+  font-size: 1.2rem;
+}
+
+.btn-message {
+  background-color: var(--brand-color, #c1126d); 
+  border-radius: 8px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.btn-message:hover {
+  background-color: var(--brand-color-hover, #9c0e58);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(193, 18, 109, 0.3);
+}
