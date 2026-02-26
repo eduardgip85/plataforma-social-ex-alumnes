@@ -1,4 +1,4 @@
-export interface Event {
+export interface Evento {
   id: number;
   name: string;
   img: string;
@@ -8,7 +8,7 @@ export interface Event {
   description: string;
 }
 
-export const eventsData: Event[] = [
+export const eventsData: Evento[] = [
   {
     id: 1,
     name: "Alumni Meetup",

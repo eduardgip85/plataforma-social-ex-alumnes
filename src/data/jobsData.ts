@@ -63,5 +63,23 @@ export const jobsData: Job[] = [
     maxSalary: 50000,
     typeContract: "Full time",
     requiredTecnologies: ["Figma", "Adobe XD", "Sketch", "Photoshop"]
+  },
+  {
+    id: 7,
+    name: "Mobile developer",
+    company: "Company",
+    minSalary: 35000,
+    maxSalary: 50000,
+    typeContract: "Full time",
+    requiredTecnologies: ["React Native", "Flutter", "Swift", "Kotlin"]
+  },
+  {
+    id: 8,
+    name: "QA engineer",
+    company: "Company",
+    minSalary: 35000,
+    maxSalary: 50000,
+    typeContract: "Full time",
+    requiredTecnologies: ["Selenium", "JUnit", "TestNG", "Cucumber"]
   }
 ];

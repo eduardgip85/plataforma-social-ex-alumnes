@@ -1,9 +1,20 @@
 import { jobsData, type Job } from '../../data/jobsData';
 
 const jobsList = document.getElementById('jobsList') as HTMLDivElement;
+const searchBar = document.getElementById('SearchBar') as HTMLInputElement;
 
 function renderJobs(data: Job[]) {
   jobsList.innerHTML = '';
+
+  if (data.length === 0) {
+    jobsList.innerHTML = `
+      <div class="col-12 text-center py-5">
+        <i class="bi bi-search fs-1 text-muted mb-3 d-block"></i>
+        <p class="fs-4 text-muted">Vaja, no hem trobat cap treball que coincideixi amb la teva cerca.</p>
+      </div>
+    `;
+    return;
+  }
 
   data.forEach(job => {
     const card = `
@@ -45,5 +56,25 @@ function renderJobs(data: Job[]) {
     jobsList.innerHTML += card;
   });
 }
+
+searchBar.addEventListener('input', (e: Event) => {
+    const target = e.target as HTMLInputElement;
+    const searchTerm = target.value.toLowerCase().trim();
+
+    const filteredJobs = jobsData.filter(job => {
+
+      const matchesName = job.name.toLowerCase().includes(searchTerm);
+
+      const marchesCompany = job.company.toLowerCase().includes(searchTerm);
+        
+      const matchesTags = job.requiredTecnologies.some(tag => 
+          tag.toLowerCase().includes(searchTerm)
+      );
+
+        return matchesName || matchesTags || marchesCompany;
+    });
+
+    renderJobs(filteredJobs);
+});
 
 renderJobs(jobsData);

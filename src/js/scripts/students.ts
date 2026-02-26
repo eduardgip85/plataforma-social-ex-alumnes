@@ -1,9 +1,20 @@
 import { studentsData, type Student } from '../../data/studentsData';
 
 const studentsList = document.getElementById('studentsList') as HTMLDivElement;
+const searchBar = document.getElementById('SearchBar') as HTMLInputElement;
 
 function renderStudents(data: Student[]) {
   studentsList.innerHTML = '';
+
+  if (data.length === 0) {
+    studentsList.innerHTML = `
+      <div class="col-12 text-center py-5">
+        <i class="bi bi-search fs-1 text-muted mb-3 d-block"></i>
+        <p class="fs-4 text-muted">Vaja, no hem trobat cap alumne que coincideixi amb la teva cerca.</p>
+      </div>
+    `;
+    return;
+  }
 
   data.forEach(student => {
 
@@ -34,6 +45,28 @@ function renderStudents(data: Student[]) {
     `;
     studentsList.innerHTML += card;
   });
+
 }
+
+searchBar.addEventListener('input', (e: Event) => {
+
+  const target = e.target as HTMLInputElement;
+  const searchTerm = target.value.toLowerCase().trim();
+
+  const filteredStudents = studentsData.filter(student => {
+
+    const matchesName = student.name.toLowerCase().includes(searchTerm);
+
+    const matchesTags = student.tags.some(tag =>
+      tag.toLowerCase().includes(searchTerm)
+    );
+
+    return matchesName || matchesTags;
+
+  });
+
+  renderStudents(filteredStudents);
+
+});
 
 renderStudents(studentsData);

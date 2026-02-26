@@ -1,9 +1,20 @@
-import { eventsData, type Event } from '../../data/eventsData';
+import { eventsData, type Evento } from '../../data/eventsData';
 
 const eventsList = document.getElementById('eventsList') as HTMLDivElement;
+const searchBar = document.getElementById('SearchBar') as HTMLInputElement;
 
-function renderEvents(data: Event[]) {
+function renderEvents(data: Evento[]) {
   eventsList.innerHTML = '';
+
+  if (data.length === 0) {
+    eventsList.innerHTML = `
+      <div class="col-12 text-center py-5">
+        <i class="bi bi-search fs-1 text-muted mb-3 d-block"></i>
+        <p class="fs-4 text-muted">Vaja, no hem trobat cap esdeveniment que coincideixi amb la teva cerca.</p>
+      </div>
+    `;
+    return;
+  }
 
   data.forEach(event => {
     const card = `
@@ -39,5 +50,21 @@ function renderEvents(data: Event[]) {
     eventsList.innerHTML += card;
   });
 }
+
+searchBar.addEventListener('input', (e: Event) => {
+    const target = e.target as HTMLInputElement;
+    const searchTerm = target.value.toLowerCase().trim();
+
+    const filteredEvents = eventsData.filter(event => {
+
+      const matchesName = event.name.toLowerCase().includes(searchTerm);
+
+      const matchesLocation = event.location.toLowerCase().includes(searchTerm);
+
+      return matchesName || matchesLocation;
+    });
+
+    renderEvents(filteredEvents);
+});
 
 renderEvents(eventsData);
