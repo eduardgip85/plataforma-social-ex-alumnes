@@ -1,21 +1,27 @@
-# plataforma-social-ex-alumnes
 # ITAlumni - Barcelona Activa 🎓
 
 Plataforma de connexió per a exalumnes de l'IT Academy de Barcelona Activa. Aquest projecte neix per enfortir la xarxa professional i facilitar l'accés a oportunitats laborals del sector tech.
 
-## 🚀 Característiques (Nivell 1)
-- **Landing Page :** Disseny modern i responsiu amb Bootstrap 5.
-- **Xarxa d'Alumnes:** Llistat dinàmic d'usuaris generat mitjançant TypeScript.
-- **Llistat de treballs:** Llistat dinàmic de treballs generat mitjançant TypeScript.
-- **Llistat d'esdeveniments:** Llistat dinàmic d'esdeveniments generat mitjançant TypeScript.
-- **Dades Tipades:** Ús d'Interfaces de TypeScript per garantir la integritat de la informació.
-- **Estructura Escalable:** Organització per components, estils i dades (mocked data).
+## 🚀 Característiques
+
+### Nivell 1: Fonaments i Estructura
+* **Landing Page**: Disseny modern i responsiu amb Bootstrap 5.
+* **Llistats Dinàmics**: Generació automàtica de perfils, feines i esdeveniments mitjançant TypeScript.
+* **Dades Tipades**: Ús d'Interfaces per garantir la integritat de la informació.
+* **Estructura Escalable**: Organització modular per components i dades (mocked data).
+
+### Nivell 2: Interactivitat i Qualitat
+* **Cercadors en Temps Real**: Implementació de lògica de filtratge dinàmic per a Alumnes, Feines i Esdeveniments.
+* **Testing Unitari**: Implementació de proves automatitzades amb **Vitest** per validar dades.
+* **Experiència d'Usuari (UX)**: Gestió d'estats buits (empty states) quan no hi ha resultats en les cerques.
+* **Disseny Avançat**: Optimització de la responsivitat mitjançant mides fluides (`clamp`) i components personalitzats.
 
 ## 🛠️ Tecnologies utilitzades
-- **HTML5 & CSS3** (Custom Properties)
-- **Bootstrap 5** (Layout & Components)
-- **TypeScript** (Lògica de renderitzat)
-- **Vite** (Build tool i servidor de desenvolupament)
+* **HTML5 & CSS3** (Custom Properties & Flexbox/Grid)
+* **Bootstrap 5** (Layout & Components)
+* **TypeScript** (Lògica de renderitzat i filtratge)
+* **Vite** (Build tool i servidor de desenvolupament)
+* **Vitest** (Framework de Testing unitari)
 
 ## 📦 Instal·lació
 1. Clona el repositori: `git clone https://github.com/el-teu-usuari/italumni.git`
